@@ -8,8 +8,8 @@ spring:
         git:
           uri: https://github.com/PELIME/hello-spring-cloud
           search-paths: config
-          username:
-          password:
+          username: PELIME
+          password: xcxlbx1996821
 #如果使用 GitLab 作为仓库的话，git.uri 需要在结尾加上 .git，GitHub 则不用
 server:
   port: 8888
