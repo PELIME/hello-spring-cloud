@@ -8,6 +8,8 @@ spring:
         git:
           uri: https://github.com/PELIME/hello-spring-cloud
           searchPaths: respo
+  zipkin:
+      base-url: http://localhost:9411
 #如果使用 GitLab 作为仓库的话，git.uri 需要在结尾加上 .git，GitHub 则不用
 server:
   port: 8888
