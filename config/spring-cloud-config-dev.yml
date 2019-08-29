@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: hello-spring-cloud-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/PELIME/hello-spring-cloud
+          search-paths: config
+          username:
+          password:
+#如果使用 GitLab 作为仓库的话，git.uri 需要在结尾加上 .git，GitHub 则不用
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

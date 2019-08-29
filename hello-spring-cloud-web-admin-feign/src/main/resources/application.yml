@@ -8,6 +8,10 @@ spring:
     servlet:
       content-type: text/html
 
+feign:
+  hystrix:
+    enabled: true
+
 server:
   port: 8765
 

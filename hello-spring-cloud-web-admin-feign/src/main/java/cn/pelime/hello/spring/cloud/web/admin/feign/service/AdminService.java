@@ -1,5 +1,6 @@
 package cn.pelime.hello.spring.cloud.web.admin.feign.service;
 
+import cn.pelime.hello.spring.cloud.web.admin.feign.service.impl.AdminServiceHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @modified By：
  * @version: 1.0
  */
-@FeignClient(value ="hello-spring-cloud-service-admin")
+@FeignClient(value ="hello-spring-cloud-service-admin",fallback = AdminServiceHystrix.class)
 public interface AdminService {
     @RequestMapping(value = "hi",method = RequestMethod.GET)
     public String sayHi(@RequestParam("message") String message);
